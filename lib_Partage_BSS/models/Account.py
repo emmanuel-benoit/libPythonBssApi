@@ -593,8 +593,7 @@ class Account(GlobalModel):
     @zimbraPrefFromDisplay.setter
     def zimbraPrefFromDisplay(self, value):
         if isinstance(value, str) or value is None:
-            if utils.checkIsMailAddress(value):
-                self._zimbraPrefFromDisplay = value
+            self._zimbraPrefFromDisplay = value
         else:
             raise TypeError
 
